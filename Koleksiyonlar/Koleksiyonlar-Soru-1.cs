@@ -12,12 +12,14 @@ namespace Koleksiyonlar_Soru_1
             int throwenSayi = 0;
             string deger = "";
             int asalMi = 0;
+            int asalToplam = 0, asalOlmayanToplam = 0;
+            double ortalamaAsalOlmayan = 0, ortalamaAsal=0;
            
             ArrayList girilen = new ArrayList();
             ArrayList asalList = new ArrayList();
             ArrayList asalOlmayanList = new ArrayList();
 
-            while (sayi < 20) 
+            while (sayi < 3) 
             {
                 Console.Write(sayi+1+". Sayıyı Giriniz: ");
 
@@ -69,13 +71,22 @@ namespace Koleksiyonlar_Soru_1
             asalOlmayanList.Reverse();
             foreach (var asalOlmayan in asalOlmayanList)
             {
+                asalOlmayanToplam += (int)asalOlmayan;
+                
                 Console.WriteLine("Asal Olmayan Sayılar: " + asalOlmayan);
+                Console.WriteLine("Asal Olmayan Toplam: " + asalOlmayanToplam);
             }
+            ortalamaAsalOlmayan = asalOlmayanToplam / asalOlmayanList.Count;
+            Console.WriteLine("Asal Olmayan Ortalama: " + ortalamaAsalOlmayan);
 
             foreach (var asal in asalList)
             {
                 Console.WriteLine("Asal Sayılar: " + asal);
+                asalToplam += (int)asal;
+                Console.WriteLine("Asal  Toplam: " + asalToplam);
             }
+            ortalamaAsal = asalToplam / asalList.Count;
+            Console.WriteLine("Asal Ortalama: " + ortalamaAsal);
 
         }
        
