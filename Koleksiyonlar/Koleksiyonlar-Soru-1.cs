@@ -19,7 +19,7 @@ namespace Koleksiyonlar_Soru_1
             ArrayList asalList = new ArrayList();
             ArrayList asalOlmayanList = new ArrayList();
 
-            while (sayi < 3) 
+            while (sayi < 20) 
             {
                 Console.Write(sayi+1+". Sayıyı Giriniz: ");
 
